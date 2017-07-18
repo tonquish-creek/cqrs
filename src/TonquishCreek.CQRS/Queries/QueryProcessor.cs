@@ -3,7 +3,7 @@
 namespace TonquishCreek.CQRS.Queries
 {
     /// <summary></summary>
-    public sealed class QueryProcessor : IQueryProcessor
+    public sealed class QueryProcessor : IQueryMessageRouter
     {
         #region Constructor(s)
         /// <summary>Initializes a new instance of the <see cref="QueryProcessor"/> class.</summary>
@@ -29,11 +29,11 @@ namespace TonquishCreek.CQRS.Queries
         #region Public Method(s)
         /// <summary>Executes the specified query.</summary>
         /// <typeparam name="TResult">The <see cref="Type"/> of the result(s) to return.</typeparam>
-        /// <param name="query">The <see cref="IQuery{TResult}"/> to execute.</param>
+        /// <param name="query">The <see cref="IQueryMessage{TResult}"/> to execute.</param>
         /// <returns>An object representing the query results.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="query"/> is <c>null</c>.</exception>
         public TResult Execute<TQuery, TResult>(TQuery query)
-            where TQuery : IQuery<TResult>
+            where TQuery : IQueryMessage<TResult>
         {
             if (query == null)
             {
@@ -56,7 +56,7 @@ namespace TonquishCreek.CQRS.Queries
         #endregion
 
         #region Private Method(s)
-        private IQueryHandler<TResult> CreateHandlerFor<TResult>(IQuery<TResult> query)
+        private IQueryHandler<TResult> CreateHandlerFor<TResult>(IQueryMessage<TResult> query)
         {
             var handler = Factory.CreateHandlerFor(query);
 

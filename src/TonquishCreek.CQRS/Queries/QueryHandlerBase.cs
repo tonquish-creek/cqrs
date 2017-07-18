@@ -2,7 +2,7 @@
 {
     /// <summary>Abstract base class for query handlers.</summary>
     public abstract class QueryHandlerBase<TQuery, TResult> : HandlerBase, IQueryHandler<TQuery, TResult>
-        where TQuery : class, IQuery<TResult>
+        where TQuery : class, IQueryMessage<TResult>
     {
         #region Constructor(s)
         /// <summary>Initializes a new instance of the <see cref="QueryHandlerBase{TQuery, TResult}" /> class.</summary>
@@ -20,7 +20,7 @@
         #endregion
 
         #region IQueryHandler Member(s)
-        TResult IQueryHandler<TResult>.Handle(IQuery<TResult> query)
+        TResult IQueryHandler<TResult>.Handle(IQueryMessage<TResult> query)
         {
             return Handle(query as TQuery);
         }

@@ -6,6 +6,8 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".assets", ".assets", "{D25B8713-DCEF-4B67-AD47-E63AE563B5ED}"
 	ProjectSection(SolutionItems) = preProject
 		.assets\CustomDictionary.xml = .assets\CustomDictionary.xml
+		.assets\SharedAssemblyInfo.cs = .assets\SharedAssemblyInfo.cs
+		.assets\SigningKey.snk = .assets\SigningKey.snk
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{719989CA-46BC-4D29-A91F-7310A3260FFC}"
@@ -30,6 +32,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Castle Windsor", "Castle Wi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Simple Injector", "Simple Injector", "{C7D3DE7C-84B5-4001-99FE-AE222B8AD7BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TonquishCreek.CQRS.SimpleInjector", "TonquishCreek.CQRS.SimpleInjector\TonquishCreek.CQRS.SimpleInjector.csproj", "{6CF0AB54-2C24-46CD-9A7B-697C5634BA60}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +48,10 @@ Global
 		{12A8EEFA-9D77-4085-B80F-FE23AF46F26D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12A8EEFA-9D77-4085-B80F-FE23AF46F26D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12A8EEFA-9D77-4085-B80F-FE23AF46F26D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CF0AB54-2C24-46CD-9A7B-697C5634BA60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CF0AB54-2C24-46CD-9A7B-697C5634BA60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CF0AB54-2C24-46CD-9A7B-697C5634BA60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CF0AB54-2C24-46CD-9A7B-697C5634BA60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,5 +62,6 @@ Global
 		{2417C3B9-481E-4662-A3A0-84403B4040A8} = {6C0FFC9E-10A6-4B8A-9C09-657A9D0DE094}
 		{3CEF2618-961C-4133-97DB-85B27219AE19} = {6C0FFC9E-10A6-4B8A-9C09-657A9D0DE094}
 		{C7D3DE7C-84B5-4001-99FE-AE222B8AD7BB} = {6C0FFC9E-10A6-4B8A-9C09-657A9D0DE094}
+		{6CF0AB54-2C24-46CD-9A7B-697C5634BA60} = {C7D3DE7C-84B5-4001-99FE-AE222B8AD7BB}
 	EndGlobalSection
 EndGlobal

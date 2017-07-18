@@ -10,7 +10,7 @@ namespace TonquishCreek.CQRS.Queries
         /// <typeparam name="TResult"></typeparam>
         /// <param name="query"></param>
         /// <returns></returns>
-        IQueryHandler<TResult> CreateHandlerFor<TResult>(IQuery<TResult> query);
+        IQueryHandler<TResult> CreateHandlerFor<TResult>(IQueryMessage<TResult> query);
 
         /// <summary></summary>
         /// <param name="handler"></param>
